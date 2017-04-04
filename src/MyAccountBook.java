@@ -11,6 +11,7 @@ public class MyAccountBook {
         int totalSpent = busFee + forLunch + Icedchocolatte;
 
         System.out.println("오늘 쓴 경비는?" + totalSpent+ "원입니다.");
+        System.out.println("another line");
 
     }
 }
