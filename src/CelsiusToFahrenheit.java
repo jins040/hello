@@ -7,7 +7,10 @@ public class CelsiusToFahrenheit {
 
         int celsiusValue = 22;
 
-        double result = toFahrenheit(celsiusValue);
+        Celsius2FahrenheitService service =
+                new Celsius2FahrenheitService();    // 객체화 작업 'sevice'가 객체
+
+        double result = service.toFahrenheit(celsiusValue);
 
         System.out.println("섭씨 온도 : " + celsiusValue + "도");
         System.out.println("섭씨 -> 화씨 : " + result + "도\n");
@@ -18,11 +21,4 @@ public class CelsiusToFahrenheit {
         System.out.println("ex) 22.0 + 10 = " + intPlusDouble + " (int값 + double값 = double값)");
 
     }
-
-    public static double toFahrenheit(int celsius) {
-
-        return (celsius * 1.8) + 32;
-
-    }
-
 }

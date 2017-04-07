@@ -10,30 +10,21 @@ public class PasswordGenerator2nd {
         // input from keyboard
         Scanner in = new Scanner(System.in);
 
-        System.out.println("단어를 하나 입력하세요: ");
+        System.out.print("단어를 하나 입력하세요: ");
         String targetStr = in.nextLine();
 
         // processing
-        String postfix = "##";
-
-        if (targetStr.length() >= 8) {
-            // 8자리 이상일 때 로직
-            postfix = "";
-        }
 
         String prefix = "$$";
+        String postfix = "##";
 
-        int squareLengthOfChar = targetStr.length() * targetStr.length();
+        PasswordGeneratorService passwordGenerated =
+                new PasswordGeneratorService();
 
-        targetStr = targetStr.substring(0,1).toUpperCase() + targetStr.substring(1);
-
-        String passwordGenerated = prefix + targetStr + squareLengthOfChar + postfix;
+        String result = passwordGenerated.modifyingChar(targetStr, prefix, postfix);
 
         // the last.. output of the result
-        System.out.println(passwordGenerated);
+        System.out.println(result);
 
     }
-
-
-
 }
