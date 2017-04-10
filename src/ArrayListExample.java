@@ -16,7 +16,11 @@ public class ArrayListExample {
 
         // 1. review 스트링을 리스트로 변환
         // 공백을 기준으로 분리 (공백을 딜리미터로 분리)
-        List<String> stringArrayList = Arrays.asList(review.split("\\s"));  // 공백은 "\\s"로 해도 되고 " "로 해도 된다.
+
+
+        //List<String> stringArrayList = Arrays.asList(review.split("\\s"));  // 공백은 "\\s"로 해도 되고 " "로 해도 된다.
+
+        String[] stringArrayList = review.split("\\s");
 
         System.out.println("1. review 스트링을 리스트로 변환");
 
@@ -35,7 +39,7 @@ public class ArrayListExample {
             totalSum += e.length();
         }
 
-        totalAverage = (double)totalSum / stringArrayList.size();   // Array List에서는 length() 대신 size()
+        totalAverage = (double)totalSum / stringArrayList.length;   // Array List에서는 length() 대신 size()
 
         System.out.printf("\n2. 전체 단어 글자 수의 평균은 %.2f입니다.\n\n", totalAverage);
 

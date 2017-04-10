@@ -42,9 +42,9 @@ public class MemberMain {
         //String specificLastName = "이";
         System.out.print("2. 성(Last name)을 입력해주세요. ");
         String specificLastName = in.nextLine();
-        int havingSpicificLastName = classInMemberService.howManyMemberswithLastName(list, specificLastName);
+        int havingSpecificLastName = classInMemberService.howManyMemberswithLastName(list, specificLastName);
 
-        System.out.printf("%s씨 성을 가진 구성원 수는 %d명입니다.\n\n", specificLastName, havingSpicificLastName);
+        System.out.printf("%s씨 성을 가진 구성원 수는 %d명입니다.\n\n", specificLastName, havingSpecificLastName);
         double averageIdChar = classInMemberService.calcAverageIdChar(list);
 
         System.out.printf("3. 구성원 Email ID 글자 수 평균은 %.1f글자입니다.\n", averageIdChar);

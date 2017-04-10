@@ -8,17 +8,17 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 public class Gourmet {
 
     // 필드
-    private String title;
+    private String title;   // 멤버변수(객체 상태 표현, heap에 생성), 지역변수는 함수 내부에서 사용(stack에 생성)
     private String mainMenu;
     private int score;
 
-    // 생성자, 모양이 있지만 생략되어 있는 것
+    // 생성자, 모양이 있지만 생략되어 있는 것, return값은 없다
     public Gourmet() {
-        System.out.println("생성자 정말 생성되나요?");    // 개발자 로그
+        System.out.println("생성자 정말 호출되나요?");    // 개발자 로그, 생성자는 Class 이름과 같은 것이 원칙
     }
 
     public Gourmet(String title, String mainMenu, int score) {  // 3개 Input 생성자, 우클릭+Generate+Constructor
-        this.title = title;
+        this.title = title;         // this는 자기 자신의 멤버 변수
         this.mainMenu = mainMenu;
         this.score = score;
     }

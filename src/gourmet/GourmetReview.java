@@ -90,5 +90,14 @@ public class GourmetReview {
 
         System.out.printf("맛집 점수의 평균은 %.1f점입니다.", result);
 
+
+        // 실행할 때마다 결과 값이 바뀔 수도 있는 함수
+        Gourmet g1 = new Gourmet("a", "b", 25);
+        Gourmet g2 = new Gourmet("a", "b", 30);
+
+        g1.getScore();
+        g2.getScore();  // g1과 g2에서 같은 호출 방식이지만 결과 값이 다르다. (특정 데이터를 사용하기 때문)
+                        // 변경 가능한 다른 data를 사용한다 => Method (객체를 '먼저' 생성하고 사용)
+
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class GourmetService {
 
-    public double calcAverageScore(List<Gourmet> list) {
+    public double calcAverageScore(List<Gourmet> list) {        // list는 argument=매개변수=인자
 
         int sum = 0;
 

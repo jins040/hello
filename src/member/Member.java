@@ -5,7 +5,7 @@ package member;
  */
 public class Member {
 
-    // 필드
+    // 필드, Property
     private String name;
     private int age;
     private String hpnum;
