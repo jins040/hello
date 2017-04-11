@@ -1,5 +1,6 @@
 package majorleague;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
 public class ParkService {
 
     // 2번
-    public int parkNumOfNoneUS(List<Park> list) {
+    public int countingNumOfNoneUS(List<Park> list) {
 
         int countNum = 0;
 
@@ -24,20 +25,19 @@ public class ParkService {
     }
 
     // 3번
-    public int parkNumHavingAlias(List<Park> list) {
+    public List<String> findParkHavingAlias(List<Park> list) {
 
-        int countNum = 0;
+        List<String> listHavingAlias = new ArrayList<>();
 
         for (Park e : list) {
             if(e.getParkAlias().equals("")) {
 
             } else{
-                countNum++;
-                System.out.println(e.getParkAlias());
+                listHavingAlias.add(e.getParkName());
             }
         }
 
-        return countNum;
+        return listHavingAlias;
     }
 
     // 4번

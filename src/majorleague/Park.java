@@ -14,7 +14,8 @@ public class Park {
     private String country;
 
     // 생성자
-
+    public Park() {
+    }
 
     public Park(String parkKey, String parkName, String parkAlias
             , String city, String state, String country) {
@@ -30,7 +31,6 @@ public class Park {
     public String getParkKey() {
         return parkKey;
     }
-
     public void setParkKey(String parkKey) {
         this.parkKey = parkKey;
     }
@@ -38,7 +38,6 @@ public class Park {
     public String getParkName() {
         return parkName;
     }
-
     public void setParkName(String parkName) {
         this.parkName = parkName;
     }
@@ -46,7 +45,6 @@ public class Park {
     public String getParkAlias() {
         return parkAlias;
     }
-
     public void setParkAlias(String parkAlias) {
         this.parkAlias = parkAlias;
     }
@@ -54,7 +52,6 @@ public class Park {
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
@@ -62,7 +59,6 @@ public class Park {
     public String getState() {
         return state;
     }
-
     public void setState(String state) {
         this.state = state;
     }
@@ -70,7 +66,6 @@ public class Park {
     public String getCountry() {
         return country;
     }
-
     public void setCountry(String country) {
         this.country = country;
     }
