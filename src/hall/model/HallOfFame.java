@@ -1,4 +1,4 @@
-package hall;
+package hall.model;
 
 /**
  * Created by danawacomputer on 2017-04-11.

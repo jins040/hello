@@ -52,8 +52,13 @@ public class SalaryMain {
 
         // 4. 연도별 평균 연봉
         List<Double> averageYearlySalary = SalaryService.calcAverageYearlySalary(list);
+        //System.out.println(averageYearlySalary);
+        int yearNum = 1985;
         System.out.println("4. 연도별 평균 연봉 : ");
-        System.out.println(averageYearlySalary);
+        for (Double e : averageYearlySalary) {
+            System.out.printf("%d년도 평균 연봉 : %.2f달러\n", yearNum, e);
+            yearNum++;
+        }
 
 
     }

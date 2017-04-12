@@ -61,22 +61,26 @@ public class SalaryService {
         List<Double> tempList = new ArrayList<>();
 
         int tempNum = 1985;
-        int totalSum = 0;
+        long totalSum = 0;
         int countNum = 0;
 
         for (Salary e : list) {
             if (e.getYearID().equals(Integer.toString(tempNum))) {
-                totalSum += e.getSalaryOfPlayer();
-                countNum++;
+                if (e == list.get(list.size()-1)) {                 // 마지막 2016년도는 for문 다 돌면 끝나기 때문에 특별히 설정(마지막 element일 때)
+                    tempList.add((double) totalSum / countNum);
+                } else {
+                    totalSum += e.getSalaryOfPlayer();
+                    countNum++;
+                }
             } else {
-                tempList.add((double)totalSum / countNum);
+                tempList.add((double)totalSum / countNum);          // 년도가 바뀔 때 지금까지 연산한 값을 넣어주고 다시 리셋
                 totalSum = e.getSalaryOfPlayer();
                 countNum = 1;
                 tempNum++;
             }
         }
 
-        System.out.println(tempList.size());
+        //System.out.println(tempList.size());
         return tempList;
 
     }
