@@ -1,6 +1,7 @@
 package majorleague;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,11 +14,19 @@ public class ParkMain {
 
     public static void main(String[] args) throws Exception {
 
-        FileReader fr = new FileReader("src\\Parks.csv");
+        // 입력
+        FileReader fr = null;                                           // for문 안에서 fr이 돌아가기 때문에 밖에서 할당+초기화
+        try {
+            fr = new FileReader("src\\Parks.csv");
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("파일이 없어요ㅠㅜ");
+            System.exit(0);                                         // 프로그램 종료 함수
+        }
 
         BufferedReader br = new BufferedReader(fr);
 
-        // 입력
+
         List<Park> list = new ArrayList<>();
 
         br.readLine();                                                                              // skip first line
